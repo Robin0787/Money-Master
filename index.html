@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Money Master</title>
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="md:h-screen p-4 lg:px-12 lg:py-6">
+      <section
+        class="md:flex shadow-lg h-full rounded-xl bg-white w-full md:w-4/5 mx-auto"
+      >
+        <article class="md:w-[55%]">
+          <img class="h-full md:rounded-l-xl" src="./money.png" alt="" />
+        </article>
+        <article
+          class="md:w-[45%] rounded-r-xl bg-gray-100 py-4 px-6 md:px-8 h-full"
+        >
+          <h2 class="text-xl font-semibold text-center mb-3">Income</h2>
+          <div class="form-control w-3/4 mx-auto mb-3">
+            <label class="input-group">
+              <span class="w-[30%]">Income</span>
+              <input
+                type="number"
+                id="income"
+                class="input input-bordered focus:ring-4 duration-300 ring-gray-300 focus:outline-0 w-[70%]"
+              />
+            </label>
+          </div>
+          <h2 class="text-xl font-semibold text-center mb-3">Expenses</h2>
+          <!-- Food expenses -->
+          <div class="form-control w-3/4 mx-auto mb-2">
+            <label class="input-group">
+              <span class="w-[30%]">Food</span>
+              <input
+                type="number"
+                id="food"
+                class="input input-bordered focus:ring-4 duration-300 ring-gray-300 focus:outline-0 w-[70%]"
+              />
+            </label>
+          </div>
+          <!-- Rent Expenses -->
+          <div class="form-control w-3/4 mx-auto mb-2">
+            <label class="input-group">
+              <span class="w-[30%]">Rent</span>
+              <input
+                type="number"
+                id="rent"
+                class="input input-bordered focus:ring-4 duration-300 ring-gray-300 focus:outline-0 w-[70%]"
+              />
+            </label>
+          </div>
+          <!-- Clothes expenses -->
+          <div class="form-control w-3/4 mx-auto">
+            <label class="input-group">
+              <span class="w-[30%]">Clothes</span>
+              <input
+                type="number"
+                id="clothes"
+                class="input input-bordered focus:ring-4 duration-300 ring-gray-300 focus:outline-0 w-[70%]"
+              />
+            </label>
+          </div>
+          <!-- Calculate Button -->
+          <div class="flex justify-center mt-3 mb-2">
+            <button
+              id="calculate"
+              class="text-lg text-black px-8 py-2 rounded-tl-lg rounded-br-lg bg-gray-200 md:ml-4 focus:ring-2 ring-blue-400 duration-300 hover:bg-stone-600 hover:text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <!-- Total expenses -->
+          <div class="form-control w-3/4 mx-auto mb-2">
+            <label class="input-group">
+              <input
+                type="number"
+                id="food"
+                class="input input-bordered text-center focus:outline-0 w-1/2"
+                readonly
+                value="5500"
+              />
+              <span class="w-1/2">Total Expenses</span>
+            </label>
+          </div>
+          <!-- Balance -->
+          <div class="form-control w-3/4 mx-auto mb-2">
+            <label class="input-group">
+              <input
+                type="number"
+                id="food"
+                class="input input-bordered text-center focus:outline-0 w-1/2"
+                readonly
+                value="4500"
+              />
+              <span class="w-1/2">Balance</span>
+            </label>
+          </div>
+          <!-- Save -->
+          <div class="form-control w-3/4 mx-auto">
+            <label class="input-group">
+              <span class="w-[30%]">Save</span>
+              <input
+                type="number"
+                id="clothes"
+                class="input input-bordered focus:ring-2 duration-300 ring-gray-300 focus:outline-0 w-[70%]"
+              />
+              <span>%</span>
+              <button
+                id="save"
+                class="text-md text-black px-8 py-2 rounded-md bg-neutral-300 duration-300 hover:bg-stone-600 hover:text-white"
+              >
+                Save
+              </button>
+            </label>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
