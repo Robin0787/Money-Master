@@ -26,6 +26,7 @@ income.addEventListener('input', function(){
         food.disabled = true;
     }
 })
+
 // Event for food input
 food.addEventListener('input', function(){
     totalExpenses.value = '';
@@ -80,13 +81,19 @@ clothes.addEventListener('input', function(){
         calculate.disabled = true;
     }
 })
+
 // Event for calculate button
 calculate.addEventListener('click', function () {
     const allExpenses = parseFloat(food.value) + parseFloat(rent.value) + parseFloat(clothes.value);
     
     totalExpenses.value = allExpenses;
     balance.value = parseFloat(income.value) - allExpenses;
-    saveInput.disabled = false;
+    if(balance.value > 0) {
+        saveInput.disabled = false;
+    } else {
+        balance.style.color= 'red';
+        saveInput.disabled = true;
+    }
 }) 
 // Event for saveInput
 saveInput.addEventListener('input', function(){
